@@ -1,10 +1,11 @@
-import React from 'react'
+// Importeren van react-dom, de bibliotheek die het renderen mogelijk maakt.
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+// Aanmaken van de root voor de React applicatie.
+const root = ReactDOM.createRoot(
+    document.getElementById('root') as HTMLElement
+)
+
+root.render(
+    <h1>Hello World!</h1>
 )
