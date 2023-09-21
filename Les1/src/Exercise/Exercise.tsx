@@ -1,8 +1,9 @@
 import {CSSProperties, FunctionComponent, PropsWithChildren} from 'react'
+import ExerciseTitle from './ExerciseTitle'
 
 interface ExerciseProps extends PropsWithChildren {
-    title: string,
-    background: string,
+    title: string
+    background?: string
 }
 
 const Exercise: FunctionComponent<ExerciseProps> = ({children, title, background}) => {
@@ -16,6 +17,7 @@ const Exercise: FunctionComponent<ExerciseProps> = ({children, title, background
 
     return (
         <div style={exerciseStyle}>
+            <ExerciseTitle title={title} />
             {children}
         </div>
     )
