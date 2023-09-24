@@ -7,13 +7,11 @@ interface NumberGridProps {
 const NumberGrid: FunctionComponent<NumberGridProps> = ({size}) => {
     const output = []
     for (let i = 0; i < size; i++) {
-        output.push(<div className='grid-row'>)
-
+        const row = []
         for (let j = 0; j < size; j++){
-            output.push(<button className='square'>{i * size + j + 1}</button>)
+            row.push(<button className='square'>{i * size + j + 1}</button>)
         }
-
-        output.push(</div>)
+        output.push(<div className='grid-row'>{row}</div>)
     }
 
     return (

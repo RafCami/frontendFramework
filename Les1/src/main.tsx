@@ -5,6 +5,8 @@ import Exercise from './Exercise/Exercise'
 import ExerciseOne from './Exercise1/ExerciseOne'
 import ExerciseTwo from './Exercise2/ExerciseTwo'
 import ExerciseThree from './Exercise3/ExerciseThree'
+import ExerciseFour from './Exercise4/ExerciseFour'
+import ExerciseFive from './Exercise5/ExerciseFive'
 
 // Aanmaken van de root voor de React applicatie.
 const root = ReactDOM.createRoot(
@@ -23,10 +25,10 @@ root.render(
       <ExerciseThree />
     </Exercise>
     <Exercise title={'Exercise4: Number Grid'} background='#77EEEE'>
-      <h1>Test</h1>
+      <ExerciseFour />
     </Exercise>
     <Exercise title={'Exercise5: Comment Card'}>
-      <h1>Test</h1>
+      <ExerciseFive />
     </Exercise>
   </>
 )
