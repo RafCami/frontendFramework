@@ -1,17 +1,20 @@
-import {FunctionComponent, ReactNode} from 'react'
+import {FunctionComponent, ReactNode, useState, useContext} from 'react'
+import {AccordionContext} from './accordion.tsx'
 
 interface AccordionItemProps {
     children: ReactNode
     title: string
+    openKey: string
 }
 
-const AccordionItem: FunctionComponent<AccordionItemProps> = ({children, title}) => {
-    const isOpen = false
+const AccordionItem: FunctionComponent<AccordionItemProps> = ({children, title, openKey}) => {
+    const {currentOpenKey, toggleOpenKey} = useContext(AccordionContext)
+    const isOpen = openKey === currentOpenKey
 
     return (
         <div className={'accordion-item'}>
             <div className={'title'}>{title}</div>
-            <div className={'chevron'}>
+            <div className={'chevron'} onClick={() => toggleOpenKey(openKey)}>
                 {isOpen ? <button>&and;</button> : <button>&or;</button>}
             </div>
             <div className={'content'}>
