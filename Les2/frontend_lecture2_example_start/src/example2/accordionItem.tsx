@@ -1,4 +1,4 @@
-import {FunctionComponent, ReactNode, useState, useContext} from 'react'
+import {FunctionComponent, ReactNode, useContext} from 'react'
 import {AccordionContext} from './accordion.tsx'
 
 interface AccordionItemProps {
