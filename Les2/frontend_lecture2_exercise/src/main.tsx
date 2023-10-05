@@ -1,10 +1,13 @@
-import {StrictMode} from 'react'
 import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
 import './index.css'
+import './style.css'
+import ExerciseSix from './exerciseSix/exerciseSix.tsx'
+import Exercise from './exercise/Exercise.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  <>
+  <Exercise title={'Exercise6: Calculator'}>
+    <ExerciseSix />
+  </Exercise>
+  </>
 )

@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 import {FunctionComponent} from 'react'
+import { useState } from 'react'
+import {MouseEventHandler} from 'react'
 
 const Calculator = styled.div`
   padding: 1.5em 2em;
@@ -35,8 +37,28 @@ const CalculatorScreen = styled.div`
 const buttons = ['7', '8', '9', '4', '5', '6', '1', '2', '3', 'C', '0', 'Del']
 
 const ExerciseSix: FunctionComponent = () => {
+  const [label, setLabel] = useState<number>(0)
+
+  const handleMouseEvent: MouseEventHandler<HTMLElement> = evt => {
+    const button = evt.currentTarget.textContent
+    if (button === null) return
+    if (button === 'C') {
+      setLabel(0)
+    } else if (button === 'Del') {
+      setLabel(label => Math.floor((label / 10)))
+    } else {
+      setLabel(label => label * 10 + parseInt(button))
+    }
+  }
+  
     return (
         <>
+            <Calculator>
+                <CalculatorScreen>{label}</CalculatorScreen>
+                {buttons.map((button) => (
+                    <CalculatorButton key={button} onClick={handleMouseEvent}>{button}</CalculatorButton>
+                ))}
+            </Calculator>
         </>
     )
 }
