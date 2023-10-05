@@ -26,10 +26,9 @@ const ExerciseSeven: FunctionComponent = () => {
     const [massa, setMassa] = useState<number>(74)
 
     const SliderHandlerHoogte : ChangeEventHandler<HTMLInputElement> = evt => {
-      console.log(evt)
-        const value = evt.currentTarget.value
-        if (value === null) return
-        setHoogte(parseInt(value))
+      const value = evt.currentTarget.value
+      if (value === null) return
+      setHoogte(parseInt(value))
     }
     const SliderHandlerMassa : ChangeEventHandler<HTMLInputElement> = evt => {
         const value = evt.currentTarget.value
