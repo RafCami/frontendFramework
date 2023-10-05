@@ -10,7 +10,7 @@ interface RaterProps {
 const Rater: FunctionComponent<RaterProps> = ({rating, max}) => {
     const stars = []
     for (let i = 0; i < max; i++) {
-        stars.push(<Star full={i < rating}/>)
+        stars.push(<Star full={i < rating} key={i}/>)
     }
     return (
         <div className='rater'>
