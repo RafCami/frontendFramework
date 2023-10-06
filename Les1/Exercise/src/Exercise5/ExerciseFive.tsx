@@ -1,10 +1,23 @@
-import {FunctionComponent} from 'react'
+import {FunctionComponent, createContext, useState} from 'react'
 import CommentCard from './CommentCard'
 import './style.css'
 import IComment from './IComment'
 
+interface ICommentContext {
+    currentOpenKey: string | undefined
+    toggleOpenKey: (newOpenKey: string | undefined) => void
+}
+
+export const CommentContext = createContext<ICommentContext>({
+    currentOpenKey: undefined,
+    toggleOpenKey: (): void => {
+        console.warn('An implementation for this method has not been provided.')
+    },
+})
+
+
 interface ExerciseFiveProps {
-    
+    defaultOpenKey?: string,
 }
 
 const comment1: IComment = {
@@ -24,12 +37,24 @@ const comment2: IComment = {
 }
 
 
-const ExerciseFive: FunctionComponent<ExerciseFiveProps> = () => {
+const ExerciseFive: FunctionComponent<ExerciseFiveProps> = ({defaultOpenKey}) => {
+    const [currentOpenKey, setCurrentOpenKey] = useState<string | undefined>(defaultOpenKey)
+
+    const toggleOpenKey = (newOpenKey: string | undefined) => {
+        if (currentOpenKey === newOpenKey) {
+            setCurrentOpenKey(undefined)
+        } else {
+            setCurrentOpenKey(newOpenKey)
+        }
+    }
+    
     return (
         <>
+        <CommentContext.Provider value={{currentOpenKey, toggleOpenKey}}>
             <CommentCard {...comment1} />
             <hr />
             <CommentCard {...comment2} />
+        </CommentContext.Provider>
         </>
     )
 }

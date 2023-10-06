@@ -11,11 +11,11 @@ interface CommentCardProps {
 }
 
 const CommentCard: FunctionComponent<CommentCardProps> = (props) => {
-    const {firstName, lastName, avatar, content} = props
+    const {id, firstName, lastName, avatar, content} = props
     return (
         <div className='card'>
             <Avatar avatar={avatar} />
-            <CommentSection firstName={firstName} lastName={lastName} content={content} />
+            <CommentSection firstName={firstName} lastName={lastName} content={content} id={id} />
         </div>
     )
 }
