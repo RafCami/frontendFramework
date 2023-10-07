@@ -1,29 +1,31 @@
-import {FunctionComponent, MouseEventHandler, PropsWithChildren} from 'react'
-import CarouselContainer from './carouselContainer'
+import {FunctionComponent, PropsWithChildren} from 'react'
+import Carousel from './carousel'
 import getRandomImage from './images'
-import ControlButton from './controlButton'
 
 interface exerciseEightProps extends PropsWithChildren {
     
 }
 
 const exerciseEight: FunctionComponent<exerciseEightProps> = () => {
-    const images = []
+    const images: HTMLImageElement[] = [];
+
     for (let i = 0; i < 5; i++) {
-        images.push(getRandomImage())
-    }
-    
-    const handleClick : MouseEventHandler<HTMLButtonElement> = (event) => {
-        console.log(event)
+        const img = new Image();
+        img.src = getRandomImage();
+        img.alt = `image${i+1}`;
+        images.push(img);
     }
 
     return (
         <>
-            <CarouselContainer>
-                <img src={images[0]} alt='carousel' />
-                <ControlButton $prev={true} onClick={handleClick}>&lt;</ControlButton>
-                <ControlButton $prev={false} onClick={handleClick}>&gt;</ControlButton>
-            </CarouselContainer>
+            <Carousel>
+                {images.map((image, index) => { return <img key={index} src={image.src} alt={image.alt} /> })}
+                {/* <img src={getRandomImage()} alt='image1' />
+                <img src={getRandomImage()} alt='image2' />
+                <img src={getRandomImage()} alt='image3' />
+                <img src={getRandomImage()} alt='image4' />
+                <img src={getRandomImage()} alt='image5' /> */}
+            </Carousel>
         </>
     )
 }
