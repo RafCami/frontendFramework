@@ -1,5 +1,8 @@
 import {FunctionComponent} from 'react'
 import styled from 'styled-components'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faChevronDown, faChevronUp} from '@fortawesome/free-solid-svg-icons'
+import ChevronBtn from './chevronBtn'
 
 const TitleContainer = styled.div`
     font-family: "Lucida Sans", Monaco, monospace;
@@ -12,13 +15,20 @@ const TitleContainer = styled.div`
 `
 
 interface ExerciseTitleProps {
-    title: string
+    title : string
+    isOpen : boolean
+    toggleOpen : () => void
 }
 
-const ExerciseTitle: FunctionComponent<ExerciseTitleProps> = ({title}) => {
+const ExerciseTitle: FunctionComponent<ExerciseTitleProps> = ({title, isOpen, toggleOpen}) => {
+    const openBtn = <FontAwesomeIcon icon={faChevronUp}/>
+    const closedBtn = <FontAwesomeIcon icon={faChevronDown}/>
+
+
+
     return (
         <TitleContainer>
-            {title}
+            <ChevronBtn onClick={toggleOpen}>{isOpen ? openBtn : closedBtn}</ChevronBtn> {title}
         </TitleContainer>
     )
 }
