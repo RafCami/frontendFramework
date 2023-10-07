@@ -9,7 +9,7 @@ interface exerciseEightProps extends PropsWithChildren {
 const exerciseEight: FunctionComponent<exerciseEightProps> = () => {
     const images: HTMLImageElement[] = [];
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 3; i++) {
         const img = new Image();
         img.src = getRandomImage();
         img.alt = `image${i+1}`;
