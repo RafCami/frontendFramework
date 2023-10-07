@@ -34,7 +34,7 @@ const Carousel: FunctionComponent<carouselProps> = ({children}) => {
             <div style={{'display': 'none'}}>
                 {children}
             </div>
-            <p>{currentImageIndex}</p>
+            
             <ControlButton $prev={true} onClick={handlePrevClick}>&lt;</ControlButton>
             <>
                 {previousSlide !== undefined ? childrenArray[previousSlide] : <></>}
