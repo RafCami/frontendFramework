@@ -1,7 +1,11 @@
 import ReactDOM from 'react-dom/client'
 import {StrictMode} from 'react'
 import {Container} from 'react-bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 import './main.css'
+import NavBarNoBootstrap from './navbarNoBootstrap'
+import {BrowserRouter } from 'react-router-dom'
+import Routing from './routing'
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement,
@@ -9,8 +13,11 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <StrictMode>
-        <Container className="mt-4">
-
-        </Container>
+        <BrowserRouter>
+            <Container className="mt-4">
+                <NavBarNoBootstrap />
+                <Routing/>
+            </Container>
+        </BrowserRouter>
     </StrictMode>,
 )

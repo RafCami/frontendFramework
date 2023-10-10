@@ -3,6 +3,7 @@ import gif from '../../assets/404.webm'
 import useCountdown from '../../utility/useCountdown.ts'
 import styled from 'styled-components'
 import {FunctionComponent} from 'react'
+import { Navigate } from 'react-router-dom'
 
 const Video404 = styled.video`
   width: 100vw;
@@ -21,6 +22,10 @@ const CounterContainer = styled.div`
 const PageNotFound: FunctionComponent = () => {
     const countdown = useCountdown(5)
 
+    if (countdown === 0) {
+        return <Navigate to={'/'}/>
+    }
+    
     return (
         <div>
             <Video404 src={gif} autoPlay={true} loop={true}/>

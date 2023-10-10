@@ -1,9 +1,13 @@
 import Card from 'react-bootstrap/Card'
 import {getStudentById} from '../../api/studentApi.ts'
 import {FunctionComponent} from 'react'
+import { Link, useNavigate, useParams } from 'react-router-dom'
+import { Button } from 'react-bootstrap'
 
 const Student: FunctionComponent = () => {
-    const student = getStudentById(-1)
+    const navigate = useNavigate()
+    const { id } = useParams()
+    const student = getStudentById(Number(id))
 
     if (!student) {
         return <div>Student could not be found</div>
@@ -17,7 +21,7 @@ const Student: FunctionComponent = () => {
                 <Card.Text>Grade: {student?.grade}</Card.Text>
             </Card.Body>
             <Card.Footer>
-                <div>Back</div>
+                <Button onClick={() => navigate(-1)}>Back</Button>
             </Card.Footer>
         </Card>
     )

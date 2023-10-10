@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import {CSSProperties, FunctionComponent} from 'react'
+import {NavLink} from 'react-router-dom'
 
 const NavUL = styled.ul`
   list-style: none;
@@ -15,16 +16,27 @@ const NavBarNoBootstrap: FunctionComponent = () => {
         color: '#49DE73',
     }
 
-    const chooseStyle = ({isActive}: {isActive: boolean}): CSSProperties => {
+    const chooseStyle = ({isActive}: { isActive: boolean }): CSSProperties => {
         return isActive ? activeStyle : {}
     }
 
     return (
         <NavUL>
-            <NavLi><a href={'/'}>Home</a></NavLi>
-            <NavLi><a href={'/foo'}>Foo</a></NavLi>
-            <NavLi><a href={'/bar'}>Bar</a></NavLi>
-            <NavLi><a href={'/class'}>Class</a></NavLi>
+            <NavLi>
+                <NavLink to={'/'} style={chooseStyle}>Home</NavLink>
+            </NavLi>
+            <NavLi>
+                <NavLink to={'/foo'} style={chooseStyle}>Foo</NavLink>
+            </NavLi>
+            <NavLi>
+                <NavLink to={'/bar'} style={chooseStyle}>Bar</NavLink>
+            </NavLi>
+            <NavLi>
+                <NavLink to={'/class'} style={chooseStyle}>Class</NavLink>
+            </NavLi>
+            <NavLi>
+                <NavLink to={'/thisLinkProducesA404Error'} style={chooseStyle}>Error page</NavLink>
+            </NavLi>
         </NavUL>
     )
 }
