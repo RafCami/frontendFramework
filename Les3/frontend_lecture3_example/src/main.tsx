@@ -6,6 +6,7 @@ import './main.css'
 import NavBarNoBootstrap from './navbarNoBootstrap'
 import {BrowserRouter } from 'react-router-dom'
 import Routing from './routing'
+import NavBarBootstrap from './navbarBootstrap'
 
 const root = ReactDOM.createRoot(
     document.getElementById('root') as HTMLElement,
@@ -15,7 +16,7 @@ root.render(
     <StrictMode>
         <BrowserRouter>
             <Container className="mt-4">
-                <NavBarNoBootstrap />
+                <NavBarBootstrap />
                 <Routing/>
             </Container>
         </BrowserRouter>
