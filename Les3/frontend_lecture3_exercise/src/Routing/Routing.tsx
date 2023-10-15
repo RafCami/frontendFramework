@@ -14,7 +14,7 @@ const Routing: FunctionComponent<RoutingProps> = () => {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/game" element={<Outlet />}>
+            <Route path="/game" element={<Game />}>
                 <Route index element={<Game/>}/>
                 <Route path="region" element={<ChooseRegion />}/>
                 <Route path="play/:chosenRegion" element={<Play />}/>
