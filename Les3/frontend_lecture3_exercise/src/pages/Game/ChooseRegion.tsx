@@ -1,5 +1,5 @@
 import {FunctionComponent} from 'react'
-import { getAllRegions } from '../api/capitalsAPI'
+import { getAllRegions } from '../../api/capitalsAPI'
 import ListGroup from 'react-bootstrap/ListGroup'
 import { NavLink } from 'react-router-dom'
 
@@ -11,10 +11,10 @@ const ChooseRegion: FunctionComponent<ChooseRegionProps> = () => {
 
     const regions = getAllRegions().map(region => {
         return (
-            <NavLink to={`../play/${region}`}>
-            <ListGroup.Item action className='list-group-item-action' key={region}>
-                {region}
-            </ListGroup.Item>
+            <NavLink to={`../play/${region}`} key={region}>
+                <ListGroup.Item action className='list-group-item-action' key={region}>
+                    {region}
+                </ListGroup.Item>
             </NavLink>
         )
     })

@@ -1,9 +1,10 @@
 import { FunctionComponent, useState} from 'react'
 import { useParams } from 'react-router-dom'
-import { getMaxNumberOfQuestionsForRegion, getQuestions } from '../api/capitalsAPI'
+import { getMaxNumberOfQuestionsForRegion, getQuestions } from '../../api/capitalsAPI'
 import Configuration from './Configuration'
 import Question from './Question'
-import IQuestion from '../models/IQuestion'
+import IQuestion from '../../models/IQuestion'
+import Result from './Result'
 
 interface PlayProps {
     
@@ -45,7 +46,7 @@ const Play: FunctionComponent<PlayProps> = () => {
                 currentQuestion={CurrentQuestion} maxQuestions={NQuestions} score={score} response={Answer} />
             : <></>}
             {(NQuestions >= 5) && (CurrentQuestion === NQuestions) ?
-                <h1>End of game</h1>
+                <Result score={score} maxQuestions={NQuestions} region={chosenRegion!} />
             : <></>}
         </>
     )
