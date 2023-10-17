@@ -1,6 +1,7 @@
 import Coordinates from '../models/Coordinates.ts'
 import axios from 'axios'
-import IOneCallApiResponse from '../models/IOneCallApiResponse.ts'
+import IOneCallApiResponse, { DailyForecast } from '../models/IOneCallApiResponse.ts'
+import {useQuery, UseQueryResult} from '@tanstack/react-query'
 
 const API_KEY = import.meta.env.VITE_OPEN_WEATHER_API_KEY
 
@@ -42,6 +43,15 @@ const getWeather = async (coordinates: Coordinates): Promise<IOneCallApiResponse
     return data
 }
 
+
+export const useGetWeather = (coordinates: Coordinates | undefined): UseQueryResult<DailyForecast, Error> => {
+   return useQuery({
+      queryKey: ['weather', coordinates],
+      queryFn: async () => (await getWeather(coordinates as Coordinates)).daily,
+      enabled: !!coordinates,
+      refetchInterval: 5 * 60 * 1000,
+   })
+}
 //endregion
 
 
