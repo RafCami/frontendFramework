@@ -11,12 +11,25 @@ const Settings: FunctionComponent<SettingsProps> = () => {
     return (
         <>
             <Form>
-                <Form.Group
-                    className='mb-3'
-                    controlId='exampleForm.ControlInput1'
-                >
+                <Form.Group className='mb-3'>
                     <Form.Label>Refetch interval</Form.Label>
-                    <Form.Control type='number' placeholder={refetchInterval.toString()} />
+                    <Form.Control
+                        type='number'
+                        placeholder={refetchInterval.toString()}
+                        value={refetchInterval}
+                        onChange={(e) =>
+                            setRefetchInterval(Number(e.currentTarget.value))
+                        }
+                    />
+                </Form.Group>
+                <Form.Group className='mb-3'>
+                    <Form.Check
+                        type='switch'
+                        id='darkThemeSwitch'
+                        label='Use dark theme'
+                        checked={darkTheme}
+                        onChange={toggleDarkTheme}
+                    />
                 </Form.Group>
             </Form>
         </>

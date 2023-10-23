@@ -1,9 +1,19 @@
-import { FunctionComponent, useContext } from 'react'
+import { FunctionComponent, Suspense, useContext } from 'react'
 import { Tab, Tabs } from 'react-bootstrap'
 import StyledTabsWrapper from '../stylecomponents/StyledTabsWrapper'
 import SettingsContext from '../context/settingsContext'
+import Settings from '../components/Settings'
+import TopItems from '../components/TopItems'
+import LoadingPage from '../components/loadingPage'
+import { HackernewsStoryEndpoints } from '../api/hackernewsAPI'
 
-const endpoints = [
+interface Endpoint {
+    id: number
+    title: string
+    endpoint: HackernewsStoryEndpoints
+}
+
+const endpoints: Endpoint[] = [
     {
         id: 0,
         title: 'Top Stories',
@@ -24,24 +34,7 @@ const endpoints = [
         title: 'Jobs',
         endpoint: 'job',
     },
-    {
-        id: 4,
-        title: 'Settings',
-        endpoint: 'settings',
-    },
 ]
-
-const tabs = endpoints.map((endpoint) => {
-    return (
-        <Tab
-            eventKey={endpoint.endpoint}
-            title={endpoint.title}
-            key={endpoint.id}
-        >
-            {endpoint.title}
-        </Tab>
-    )
-})
 
 interface HomeProps {}
 
@@ -50,14 +43,21 @@ const Home: FunctionComponent<HomeProps> = () => {
 
     return (
         <>
-        <StyledTabsWrapper $darkTheme={darkTheme}>
-            <Tabs
-                defaultActiveKey={endpoints[0].endpoint}
-                id='navBarTabs'
-                className='mb-3'
-            >
-                {tabs}
-            </Tabs>
+            <StyledTabsWrapper $darkTheme={darkTheme}>
+                <Tabs
+                    defaultActiveKey={endpoints[0].endpoint}
+                    id='navBarTabs'
+                    className='mb-3'
+                >
+                    {endpoints.map((e) => (
+                        <Tab eventKey={e.endpoint} title={e.title} key={e.id}>
+                            <TopItems endpoint={e.endpoint} />
+                        </Tab>
+                    ))}
+                    <Tab eventKey='Settings' title='Settings'>
+                        <Settings />
+                    </Tab>
+                </Tabs>
             </StyledTabsWrapper>
         </>
     )

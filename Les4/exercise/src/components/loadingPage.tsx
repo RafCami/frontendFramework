@@ -34,4 +34,4 @@ const LoadingPage = styled.span`
   }
 `
 
-export default LoadingPage;
+export default LoadingPage

@@ -3,7 +3,7 @@ import { ISettingsContext } from '../models/ISettingsContext'
 
 const SettingsContext = createContext<ISettingsContext>({
     darkTheme: true,
-    refetchInterval: 10000,
+    refetchInterval: 300000,
     toggleDarkTheme: () => {
         console.warn('not implemented')
     },
