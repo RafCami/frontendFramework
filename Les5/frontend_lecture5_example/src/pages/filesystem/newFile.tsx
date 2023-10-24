@@ -1,10 +1,11 @@
-import {FunctionComponent, useState} from 'react'
+import {FunctionComponent, useEffect, useRef, useState} from 'react'
 import {Form, Card, Modal, Button} from 'react-bootstrap'
 import FileSystemCard from './styledComponents/fileSystemCard.tsx'
 import FileSystemIcon from './styledComponents/fileSystemIcon.tsx'
 import FileSystemName from './styledComponents/fileSystemName.tsx'
 import {faFileCirclePlus} from '@fortawesome/free-solid-svg-icons'
 import ErrorMessage from '../../utils/errorMessage.tsx'
+import { useCreateNote } from '../../API/notes.ts'
 
 interface NewFileProps {
     currentDirId: number | null
@@ -14,9 +15,14 @@ const NewFile: FunctionComponent<NewFileProps> = ({currentDirId}) => {
     const [showNewNoteModal, setShowNewNoteModal] = useState<boolean>(false)
     const [showErrorMessage, setShowErrorMessage] = useState<boolean>(true)
     const [title, setTitle] = useState('')
+    const {mutate: createNote, isError} = useCreateNote()
+    const formRef = useRef<HTMLInputElement>(null)
 
-    // DELETE DEZE LIJN ALS DE MUTATIE TOEGEVOEGD IS.
-    const isError = false
+    useEffect(() => {
+        if (showNewNoteModal) {
+            formRef.current?.focus()
+        }
+    }, [showNewNoteModal])
 
     const closeHandler = () => {
         setTitle('')
@@ -24,6 +30,7 @@ const NewFile: FunctionComponent<NewFileProps> = ({currentDirId}) => {
     }
 
     const createFile = () => {
+        createNote({title, folderId: currentDirId})
         setShowNewNoteModal(false)
         setShowErrorMessage(true)
         setTitle('')
@@ -48,6 +55,7 @@ const NewFile: FunctionComponent<NewFileProps> = ({currentDirId}) => {
                     <Form.Group className="mb-3">
                         <Form.Control type="text" placeholder="The title of the new note"
                                       value={title}
+                                      ref={formRef}
                                       onChange={(evt) => setTitle(evt.target.value)}/>
                     </Form.Group>
                 </Modal.Body>

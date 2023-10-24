@@ -110,6 +110,38 @@ export const useUpdateNote = (): UseMutationResult<INote, Error, UpdateNoteParam
     })
 }
 
+interface UseCreateNoteContext {
+    previousNotes: INote[]
+    queryKey: QueryKey
+}
+
+export const useCreateNote = (): UseMutationResult<INote, Error, CreateNoteParams, UseCreateNoteContext> => {
+    const queryClient = useQueryClient()
+
+    return useMutation({
+        mutationFn: createNote,
+        onMutate: async (newNote) => {
+            const queryKey = ['notes', newNote.folderId]
+            await queryClient.cancelQueries({queryKey})
+            const previousNotes = queryClient.getQueryData<INote[]>(queryKey) ?? []
+            queryClient.setQueriesData<CreateNoteParams[]>(queryKey, old => old ? [...old, newNote] : [newNote])
+            return {previousNotes, queryKey}
+        },
+        onError: async (_, __, context) => {
+            if (context) {
+                queryClient.setQueryData(context.queryKey, context.previousNotes)
+                await queryClient.invalidateQueries(context.queryKey)
+            }
+        },
+        onSuccess: (newNote, _, context) => {
+            if (context) {
+                const {previousNotes, queryKey} = context
+                queryClient.setQueryData<INote[]>(queryKey, [...previousNotes, newNote])
+            }
+        },
+    })
+}
+
 //endregion
 
 

@@ -5,6 +5,7 @@ import FileSystemIcon from './styledComponents/fileSystemIcon.tsx'
 import FileSystemName from './styledComponents/fileSystemName.tsx'
 import {faFolderPlus} from '@fortawesome/free-solid-svg-icons'
 import ErrorMessage from '../../utils/errorMessage.tsx'
+import { useCreateDirectory } from '../../API/directories.ts'
 
 interface NewFolderProps {
     currentDirId: number | null
@@ -14,9 +15,7 @@ const NewFolder: FunctionComponent<NewFolderProps> = ({currentDirId}) => {
     const [showNewFolderModal, setShowNewFolderModal] = useState<boolean>(false)
     const [name, setName] = useState('')
     const [showErrorMessage, setShowErrorMessage] = useState(true)
-
-    // DELETE DEZE LIJN ALS DE MUTATIE TOEGEVOEGD IS.
-    const isError = false
+    const {isError, mutate: createDirectory} = useCreateDirectory()
 
     const closeHandler = () => {
         setName('')
@@ -25,6 +24,7 @@ const NewFolder: FunctionComponent<NewFolderProps> = ({currentDirId}) => {
 
     const createFolder = () => {
         setShowErrorMessage(true)
+        createDirectory({name, parentId: currentDirId})
         closeHandler()
     }
 

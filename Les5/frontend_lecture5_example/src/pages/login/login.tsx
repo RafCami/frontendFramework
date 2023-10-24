@@ -4,6 +4,7 @@ import {Button, Col, Form, Row} from 'react-bootstrap'
 import ResponseMessage from '../../utils/responseMessage.tsx'
 import FormSubmitButtonWithLoading from '../../utils/formSubmitButtonWithLoading.tsx'
 import {useSignIn, useSignUp} from '../../API/user.ts'
+import useRedirectAfterCountdown from '../../hooks/useRedirectAfterCountdown.ts'
 
 const Login: FunctionComponent = () => {
     const [email, setEmail] = useState<string>('')
@@ -25,6 +26,10 @@ const Login: FunctionComponent = () => {
         isSuccess: signedIn,
         error: signUpError,
     } = useSignUp()
+    useRedirectAfterCountdown({
+        destination: '/notes',
+        enabled: signedUp || signedIn,
+    })
 
     const validEmail = !!email.match(/\w+@\w+\.\w+/)
 

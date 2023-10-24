@@ -1,4 +1,4 @@
-import {useQuery, UseQueryResult} from '@tanstack/react-query'
+import {useMutation, UseMutationResult, useQuery, useQueryClient, UseQueryResult} from '@tanstack/react-query'
 import assertLoggedInAndGetId from './utils/assertLoggedInAndGetId.ts'
 import supabaseClient from './utils/supabaseClient.ts'
 import getUser from './utils/getUser.ts'
@@ -16,6 +16,17 @@ export const useGetDirectories = (parentId: number | null): UseQueryResult<IDire
     return useQuery({
         queryKey: ['directories', parentId],
         queryFn: () => getDirectories({parentId}),
+    })
+}
+
+export const useCreateDirectory = (): UseMutationResult<IDirectory, Error, CreateDirectoryParams, void> => {
+    const queryClient = useQueryClient()
+    
+    return useMutation({
+        mutationFn: createDirectory,
+        onSuccess: async (data) => {
+            await queryClient.invalidateQueries(['directories', data.parentId])
+        },
     })
 }
 
