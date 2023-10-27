@@ -26,6 +26,7 @@ const API_KEY = import.meta.env.VITE_OPEN_WEATHER_API_KEY
 
 const client = axios.create({
     baseURL: 'https://api.openweathermap.org/data/2.5',
+    // api.openweathermap.org/data/2.5/weather
 })
 
 const getWeather = async (coordinates: Coordinates): Promise<IOneCallApiResponse> => {
@@ -35,9 +36,9 @@ const getWeather = async (coordinates: Coordinates): Promise<IOneCallApiResponse
         params: {
             lat: latitude,
             lon: longitude,
-            appid: API_KEY,
             units: 'metric',
             lang: 'nl-be',
+            appid: import.meta.env.VITE_OPEN_WEATHER_API_KEY,
         },
     })
     return data

@@ -1,0 +1,5 @@
+dark mode:
+https://ui.shadcn.com/docs/dark-mode/vite
+
+parallax:
+https://blog.openreplay.com/adding-parallax-animations-to-react/
