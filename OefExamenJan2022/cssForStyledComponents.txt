@@ -1,0 +1,25 @@
+-- Stijl voor Navigationitem
+-- Gebruikt deze CSS op een <li>
+
+list-style: none;
+display: inline-block;
+padding: 1em;
+font-size: larger;
+color: white;
+
+a:hover {
+    color: #2a76dd;
+}
+
+a {
+color: white;
+    text-decoration: none;
+}
+
+-- Stijl voor NavigationContainer
+-- Gebruik deze CSS op een <ul>
+
+list-style: none;
+background-color: #1d2025;
+margin: 0;
+display: flex;
