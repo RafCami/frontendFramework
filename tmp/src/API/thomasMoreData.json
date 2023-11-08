@@ -1,0 +1,931 @@
+[
+  {
+    "name": "Gegradueerde in het Winkelmanagement",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Business & Tourism",
+      "id": "6218012c-20c3-4b44-8b74-edf0617d7a12"
+    },
+    "id": "ff80bf98-f080-4653-8f30-1dad8e9ac0c9"
+  },
+  {
+    "name": "Gegradueerde in de Marketing- & Communicatie Support",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Business & Tourism",
+      "id": "6218012c-20c3-4b44-8b74-edf0617d7a12"
+    },
+    "id": "5da17eac-0602-4f5f-8c1e-9d04b61ac35b"
+  },
+  {
+    "name": "Gegradueerde in de Marketing- & Communicatie Support",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": false,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Business & Tourism",
+      "id": "6218012c-20c3-4b44-8b74-edf0617d7a12"
+    },
+    "id": "e90cac57-8f0c-428a-9a47-058a35d95419"
+  },
+  {
+    "name": "Gegradueerde in de Marketing- & Communicatie Support",
+    "campus": {
+      "name": "Lier",
+      "id": "41642830-a798-4594-a7eb-5043202cd37c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Business & Tourism",
+      "id": "6218012c-20c3-4b44-8b74-edf0617d7a12"
+    },
+    "id": "371596cc-ab50-44d0-9f50-42b9280d3c04"
+  },
+  {
+    "name": "Gegradueerde in de Juridisch-administratieve Ondersteuning",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": false,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Business & Tourism",
+      "id": "6218012c-20c3-4b44-8b74-edf0617d7a12"
+    },
+    "id": "7fc994fe-eac4-468f-aa46-a930a27a4e40"
+  },
+  {
+    "name": "Gegradueerde in de Accounting Administration",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Business & Tourism",
+      "id": "6218012c-20c3-4b44-8b74-edf0617d7a12"
+    },
+    "id": "61da4208-217f-40ef-9390-cb6a12e6b832"
+  },
+  {
+    "name": "Gegradueerde in de Accounting Administration",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": false,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Business & Tourism",
+      "id": "6218012c-20c3-4b44-8b74-edf0617d7a12"
+    },
+    "id": "b602233f-05bf-401b-aada-4c7e9b0eb787"
+  },
+  {
+    "name": "Gegradueerde in de Accounting Administration",
+    "campus": {
+      "name": "Turnhout",
+      "id": "aeeed19a-e68a-4eda-ad8e-22d5704aaf97"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Business & Tourism",
+      "id": "6218012c-20c3-4b44-8b74-edf0617d7a12"
+    },
+    "id": "83efc823-c36b-4780-af6a-e96ee4e748ab"
+  },
+  {
+    "name": "Gegradueerde in de Accounting Administration",
+    "campus": {
+      "name": "Lier",
+      "id": "41642830-a798-4594-a7eb-5043202cd37c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Business & Tourism",
+      "id": "6218012c-20c3-4b44-8b74-edf0617d7a12"
+    },
+    "id": "025447d3-63c0-48a7-8709-13cba217c4dc"
+  },
+  {
+    "name": "Gegradueerde in de Verzekeringen",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Business & Tourism",
+      "id": "6218012c-20c3-4b44-8b74-edf0617d7a12"
+    },
+    "id": "7b417f9a-e636-4b0c-afd5-ec0dccadddc1"
+  },
+  {
+    "name": "Gegradueerde in het Transport en de Logistiek",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Business & Tourism",
+      "id": "6218012c-20c3-4b44-8b74-edf0617d7a12"
+    },
+    "id": "dc815f17-d5c6-4f63-bed8-5f23fd264ca5"
+  },
+  {
+    "name": "Gegradueerde in het Transport en de Logistiek",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": false,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Business & Tourism",
+      "id": "6218012c-20c3-4b44-8b74-edf0617d7a12"
+    },
+    "id": "d3d3e494-3ca4-4c08-88c1-284eee063fe2"
+  },
+  {
+    "name": "Gegradueerde in de Sales Support",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": false,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Business & Tourism",
+      "id": "6218012c-20c3-4b44-8b74-edf0617d7a12"
+    },
+    "id": "f9b542fe-5de4-4505-9b5a-99a68afa3acb"
+  },
+  {
+    "name": "Bachelor in het Bedrijfsmanagement",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Business & Tourism",
+      "id": "6218012c-20c3-4b44-8b74-edf0617d7a12"
+    },
+    "id": "7aa5d812-7dd0-49b0-a1f6-c28ca6952988"
+  },
+  {
+    "name": "Bachelor in het Bedrijfsmanagement",
+    "campus": {
+      "name": "Turnhout",
+      "id": "aeeed19a-e68a-4eda-ad8e-22d5704aaf97"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Business & Tourism",
+      "id": "6218012c-20c3-4b44-8b74-edf0617d7a12"
+    },
+    "id": "8fb465ac-9b34-4d88-91d5-d5dcc7041d1d"
+  },
+  {
+    "name": "Bachelor in Organisatie & Management",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Business & Tourism",
+      "id": "6218012c-20c3-4b44-8b74-edf0617d7a12"
+    },
+    "id": "d8f0bba2-edcf-4c7e-80b1-22da41d26108"
+  },
+  {
+    "name": "Bachelor in de Agro- en Biotechnologie",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Life Sciences & Chemistry",
+      "id": "a3028c27-2cec-4fed-86af-8a88afce2cc2"
+    },
+    "id": "5ea5673f-1dee-4a2e-9030-6a8227004e33"
+  },
+  {
+    "name": "Bachelor in de Biomedische Laboratoriumtechnologie",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Life Sciences & Chemistry",
+      "id": "a3028c27-2cec-4fed-86af-8a88afce2cc2"
+    },
+    "id": "36ea1afe-ee59-4cb6-9207-be82ac1d517a"
+  },
+  {
+    "name": "Bachelor in de Chemie",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Life Sciences & Chemistry",
+      "id": "a3028c27-2cec-4fed-86af-8a88afce2cc2"
+    },
+    "id": "791938af-57e5-462a-a7f6-76d5d298194e"
+  },
+  {
+    "name": "Educatief Graduaat in het Secundair Onderwijs",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Education & Sport",
+      "id": "b31df53a-e359-4a32-8d8b-8cdd311ea099"
+    },
+    "id": "fb3e5066-3a5f-4b02-89f2-b0a3fbce0e80"
+  },
+  {
+    "name": "Educatieve Bachelor in het Kleuteronderwijs",
+    "campus": {
+      "name": "Vorselaar",
+      "id": "12bfd89c-c719-4885-bb34-26e19691d081"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Education & Sport",
+      "id": "b31df53a-e359-4a32-8d8b-8cdd311ea099"
+    },
+    "id": "f25191bb-4571-4dd1-8f9f-22f6821158cd"
+  },
+  {
+    "name": "Educatieve Bachelor in het Lager Onderwijs",
+    "campus": {
+      "name": "Vorselaar",
+      "id": "12bfd89c-c719-4885-bb34-26e19691d081"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Education & Sport",
+      "id": "b31df53a-e359-4a32-8d8b-8cdd311ea099"
+    },
+    "id": "3355531f-56d9-41cb-828f-dd4ba49e184c"
+  },
+  {
+    "name": "Educatieve Bachelor in het Lager Onderwijs",
+    "campus": {
+      "name": "Turnhout",
+      "id": "aeeed19a-e68a-4eda-ad8e-22d5704aaf97"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Education & Sport",
+      "id": "b31df53a-e359-4a32-8d8b-8cdd311ea099"
+    },
+    "id": "e0599e0e-dd8d-4678-9fe1-69a3b14f63ff"
+  },
+  {
+    "name": "Educatieve Bachelor in het Secundair Onderwijs",
+    "campus": {
+      "name": "Turnhout",
+      "id": "aeeed19a-e68a-4eda-ad8e-22d5704aaf97"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Education & Sport",
+      "id": "b31df53a-e359-4a32-8d8b-8cdd311ea099"
+    },
+    "id": "3dda8bc6-d1e3-4d82-ac7b-c932820db31d"
+  },
+  {
+    "name": "Educatieve Bachelor in het Secundair Onderwijs",
+    "campus": {
+      "name": "Vorselaar",
+      "id": "12bfd89c-c719-4885-bb34-26e19691d081"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Education & Sport",
+      "id": "b31df53a-e359-4a32-8d8b-8cdd311ea099"
+    },
+    "id": "0dbd41ad-e387-400f-94c4-45eadba6558b"
+  },
+  {
+    "name": "Bachelor in Sport en Bewegen",
+    "campus": {
+      "name": "Turnhout",
+      "id": "aeeed19a-e68a-4eda-ad8e-22d5704aaf97"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Education & Sport",
+      "id": "b31df53a-e359-4a32-8d8b-8cdd311ea099"
+    },
+    "id": "0fba81c8-5813-4991-87a0-d128e2889cfa"
+  },
+  {
+    "name": "Gegradueerde in de HR-support",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More People & Health",
+      "id": "828d4d8d-0d10-4bce-8b2e-7bea3702d74e"
+    },
+    "id": "2f6537e6-d1f7-4d0b-95c9-61a3d8bb4141"
+  },
+  {
+    "name": "Gegradueerde in de Orthopedagogische Begeleiding",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More People & Health",
+      "id": "828d4d8d-0d10-4bce-8b2e-7bea3702d74e"
+    },
+    "id": "2a353845-f300-4a30-8c25-96da2fba8f86"
+  },
+  {
+    "name": "Gegradueerde in de Orthopedagogische Begeleiding",
+    "campus": {
+      "name": "Lier",
+      "id": "41642830-a798-4594-a7eb-5043202cd37c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More People & Health",
+      "id": "828d4d8d-0d10-4bce-8b2e-7bea3702d74e"
+    },
+    "id": "0a9fbfc9-9ed6-4f96-a6e4-212bfe033637"
+  },
+  {
+    "name": "Gegradueerde in de Orthopedagogische Begeleiding",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More People & Health",
+      "id": "828d4d8d-0d10-4bce-8b2e-7bea3702d74e"
+    },
+    "id": "a181669a-5a1b-4b47-a1e6-41692a9af700"
+  },
+  {
+    "name": "Gegradueerde in het Maatschappelijk werk",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More People & Health",
+      "id": "828d4d8d-0d10-4bce-8b2e-7bea3702d74e"
+    },
+    "id": "4c15f968-13e6-4053-b010-d5818fb01ec9"
+  },
+  {
+    "name": "Gegradueerde in het Maatschappelijk werk",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": false,
+    "english": false,
+    "area": {
+      "name": "More People & Health",
+      "id": "828d4d8d-0d10-4bce-8b2e-7bea3702d74e"
+    },
+    "id": "e800eb34-45b8-4247-b432-e1ff6395c122"
+  },
+  {
+    "name": "Gegradueerde in het Maatschappelijk werk",
+    "campus": {
+      "name": "Turnhout",
+      "id": "aeeed19a-e68a-4eda-ad8e-22d5704aaf97"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More People & Health",
+      "id": "828d4d8d-0d10-4bce-8b2e-7bea3702d74e"
+    },
+    "id": "94c1d525-979a-45e9-8c72-a1802632d930"
+  },
+  {
+    "name": "Bachelor of Orthopaedic Technology",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": true,
+    "level": "Bachelor",
+    "area": {
+      "name": "More People & Health",
+      "id": "828d4d8d-0d10-4bce-8b2e-7bea3702d74e"
+    },
+    "id": "df15cc9a-cebf-4c46-b4be-e537e3c26226"
+  },
+  {
+    "name": "Bachelor in de Ergotherapie",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More People & Health",
+      "id": "828d4d8d-0d10-4bce-8b2e-7bea3702d74e"
+    },
+    "id": "f2f36556-5cd0-47fd-8a93-2ce0e4a46eca"
+  },
+  {
+    "name": "Bachelor in de Orthopedie",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More People & Health",
+      "id": "828d4d8d-0d10-4bce-8b2e-7bea3702d74e"
+    },
+    "id": "5b32c486-2c95-4502-8a77-7824031703ed"
+  },
+  {
+    "name": "Bachelor in het Sociaal Werk",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More People & Health",
+      "id": "828d4d8d-0d10-4bce-8b2e-7bea3702d74e"
+    },
+    "id": "e3199fcd-a08b-470c-ba58-c4aba42933b5"
+  },
+  {
+    "name": "Bachelor in de Verpleegkunde",
+    "campus": {
+      "name": "Lier",
+      "id": "41642830-a798-4594-a7eb-5043202cd37c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More People & Health",
+      "id": "828d4d8d-0d10-4bce-8b2e-7bea3702d74e"
+    },
+    "id": "28924564-2539-49d1-9f84-bdfa7f4adc55"
+  },
+  {
+    "name": "Bachelor in de Verpleegkunde",
+    "campus": {
+      "name": "Turnhout",
+      "id": "aeeed19a-e68a-4eda-ad8e-22d5704aaf97"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More People & Health",
+      "id": "828d4d8d-0d10-4bce-8b2e-7bea3702d74e"
+    },
+    "id": "8a540d4b-8067-406c-bf15-13ea02395cb9"
+  },
+  {
+    "name": "Bachelor in de Voedings- en Dieetkunde",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More People & Health",
+      "id": "828d4d8d-0d10-4bce-8b2e-7bea3702d74e"
+    },
+    "id": "961f2f5f-cafc-42bf-a925-bede95d94c07"
+  },
+  {
+    "name": "Bachelor in de Vroedkunde",
+    "campus": {
+      "name": "Lier",
+      "id": "41642830-a798-4594-a7eb-5043202cd37c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More People & Health",
+      "id": "828d4d8d-0d10-4bce-8b2e-7bea3702d74e"
+    },
+    "id": "daedfabf-e126-4a83-8649-b555ae3e31bb"
+  },
+  {
+    "name": "Bachelor in de Vroedkunde",
+    "campus": {
+      "name": "Turnhout",
+      "id": "aeeed19a-e68a-4eda-ad8e-22d5704aaf97"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More People & Health",
+      "id": "828d4d8d-0d10-4bce-8b2e-7bea3702d74e"
+    },
+    "id": "0f0343f1-355e-45bf-b06c-8550c498e2ef"
+  },
+  {
+    "name": "Gegradueerde in het Systeem- en Netwerkbeheer",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "b747e170-0d94-4b2d-9665-dad2832ca3c2"
+  },
+  {
+    "name": "Gegradueerde in het Systeem- en Netwerkbeheer",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": false,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "219cbaae-3d35-4b5b-8823-84b1bf06b0ec"
+  },
+  {
+    "name": "Gegradueerde in het Systeem- en Netwerkbeheer",
+    "campus": {
+      "name": "Lier",
+      "id": "41642830-a798-4594-a7eb-5043202cd37c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "a293689d-35c7-4897-8111-0e3d88327edb"
+  },
+  {
+    "name": "Gegradueerde in het Systeem- en Netwerkbeheer",
+    "campus": {
+      "name": "Lier",
+      "id": "41642830-a798-4594-a7eb-5043202cd37c"
+    },
+    "day": false,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "4878003c-01d9-43cc-b946-cdd1f6e20e9f"
+  },
+  {
+    "name": "Gegradueerde in de Elektromechanische systemen",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "2a4e8a01-c1cf-4e37-a98c-93b6a8b286f6"
+  },
+  {
+    "name": "Gegradueerde in de Elektromechanische systemen",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": false,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "359fe27a-d3a6-4a09-8336-a47b56bd6a9a"
+  },
+  {
+    "name": "Gegradueerde in het Internet of Things",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "a77ca8c8-257f-4735-b91f-70d9c09a9f1b"
+  },
+  {
+    "name": "Gegradueerde in het Internet of Things",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": false,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "8e5cbd20-018c-4e88-a372-d19f65b891db"
+  },
+  {
+    "name": "Gegradueerde in het Productiebeheer",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "7b23be8f-b84e-4f28-99d9-9dd5ae46810e"
+  },
+  {
+    "name": "Gegradueerde in het Programmeren",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "8e9e3d24-9f24-4b63-8c9a-276b1e0951ef"
+  },
+  {
+    "name": "Gegradueerde in het Programmeren",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": false,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "42540035-6f46-4940-af50-1b4f876695a9"
+  },
+  {
+    "name": "Gegradueerde in het Programmeren",
+    "campus": {
+      "name": "Turnhout",
+      "id": "aeeed19a-e68a-4eda-ad8e-22d5704aaf97"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "029b5a3a-e408-4b82-88e1-ddf8c03597d0"
+  },
+  {
+    "name": "Gegradueerde in het Programmeren",
+    "campus": {
+      "name": "Lier",
+      "id": "41642830-a798-4594-a7eb-5043202cd37c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "c9d1144b-7a07-4be8-a934-bf60d443f047"
+  },
+  {
+    "name": "Gegradueerde in het Programmeren",
+    "campus": {
+      "name": "Lier",
+      "id": "41642830-a798-4594-a7eb-5043202cd37c"
+    },
+    "day": false,
+    "english": false,
+    "level": "Graduaat",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "7f512121-adae-4c25-b5bc-b3056aebb76a"
+  },
+  {
+    "name": "Bachelor of Applied Computer Science",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": true,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "e8426fa4-1df6-4492-b4a6-862ffcf19ec5"
+  },
+  {
+    "name": "Bachelor in de Bouw",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "df5e0500-6c4d-4ad5-860e-5335712ede5d"
+  },
+  {
+    "name": "Bachelor in de Elektromechanica",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "6761856e-a31e-409f-9ced-6f3401b3538e"
+  },
+  {
+    "name": "Bachelor in de Energietechnologie",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "e8cf5a85-dffe-4831-84f7-e1f2bfe549e7"
+  },
+  {
+    "name": "Bachelor in de Elektronica-ICT",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "5657fc2e-4091-4546-8240-e19836c1d890"
+  },
+  {
+    "name": "Bachelor in de Toegepaste Informatica",
+    "campus": {
+      "name": "Geel",
+      "id": "3e12751c-9ccb-4f01-9ec8-d9022e6b7e0c"
+    },
+    "day": true,
+    "english": false,
+    "level": "Bachelor",
+    "area": {
+      "name": "More Tech & IT",
+      "id": "890e44a7-6376-4cec-8510-50e594a446fb"
+    },
+    "id": "10f521eb-14cb-4200-90d5-909220675fe9"
+  }
+]
