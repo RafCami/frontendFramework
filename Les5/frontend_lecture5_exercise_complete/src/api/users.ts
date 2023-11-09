@@ -13,13 +13,6 @@ import getUser from './utils/getUser.ts'
  * ---------------------------------------------------------------------------------------------------------------------
  */
 
-export const useGetProfiles = (username: string, enabled = true): UseQueryResult<IProfile[], Error> => {
-    return useQuery({
-        queryKey: ['profiles', username],
-        queryFn: () => getProfiles({username}),
-        enabled,
-    })
-}
 
 export const useGetProfile = (): UseQueryResult<IProfile | null, Error> => {
     return useQuery(
@@ -74,6 +67,19 @@ export const useSignUp = (): UseMutationResult<IProfile, Error, SignUpParams, vo
     })
 }
 
+interface UseGetProfilesParams {
+    username?: string
+    enabled?: boolean
+}
+
+export const useGetProfiles = ({username = '', enabled = true}: UseGetProfilesParams) => {
+    return useQuery({
+        queryKey: ['profiles', username],
+        queryFn: () => getProfiles({username}),
+        enabled,
+    })
+}
+
 //endregion
 
 
@@ -84,7 +90,6 @@ export const useSignUp = (): UseMutationResult<IProfile, Error, SignUpParams, vo
  *                                          API functions
  * ---------------------------------------------------------------------------------------------------------------------
  */
-
 
 /**
  * Retrieve the profile of the currently logged-in user.
@@ -272,4 +277,5 @@ const getProfiles = async ({username}: GetProfilesParams): Promise<IProfile[]> =
     }
     return data
 }
+
 //endregion

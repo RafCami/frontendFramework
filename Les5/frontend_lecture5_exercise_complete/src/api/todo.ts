@@ -2,7 +2,7 @@ import assertLoggedInAndGetId from './utils/assertLoggedInAndGetId.ts'
 import supabaseClient from './utils/supabaseClient.ts'
 import IToDoList from '../models/IToDoList.ts'
 import ITask from '../models/ITask.ts'
-import { QueryKey, UseMutationResult, UseQueryResult, useMutation, useQueries, useQuery, useQueryClient } from '@tanstack/react-query'
+import {QueryKey, useMutation, UseMutationResult, useQuery, useQueryClient, UseQueryResult} from '@tanstack/react-query'
 
 //region Mutations & queries
 
@@ -12,40 +12,26 @@ import { QueryKey, UseMutationResult, UseQueryResult, useMutation, useQueries, u
  * ---------------------------------------------------------------------------------------------------------------------
  */
 
+interface OptimisticContext<T> {
+    oldData: T
+    queryKey: QueryKey
+}
+
 export const useCreateList = (): UseMutationResult<IToDoList, Error, CreateListParams, void> => {
+    const queryClient = useQueryClient()
+
     return useMutation({
         mutationFn: createList,
+        onSettled: async () => {
+            await queryClient.invalidateQueries(['toDoLists'])
+        },
     })
-
 }
 
 export const useGetLists = (): UseQueryResult<IToDoList[], Error> => {
     return useQuery({
-        queryKey: ['lists'],
+        queryKey: ['toDoLists'],
         queryFn: getLists,
-    })
-
-}
-
-export const useDeleteList = (): UseMutationResult<void, Error, DeleteListParams, {queryKey: QueryKey, oldLists: IToDoList[]}> => {
-    const queryClient = useQueryClient()
-    return useMutation({
-        mutationFn: deleteList,
-        onMutate: async ({id}) => {
-            const queryKey = ['lists']
-            await queryClient.cancelQueries(queryKey)
-            const oldLists = queryClient.getQueryData<IToDoList[]>(queryKey) ?? []
-            queryClient.setQueryData<IToDoList[]>(queryKey, old => [...old ?? []].filter(x => x.id !== id))
-            return {queryKey, oldLists}
-        },
-        onError: (_, __, context) => {
-            if (context) {
-                queryClient.setQueryData<IToDoList[]>(context.queryKey, context.oldLists)
-            }
-        },
-        onSuccess: async (_, {id}) => {
-            await queryClient.invalidateQueries(['lists', id])
-        },
     })
 }
 
@@ -58,7 +44,93 @@ export const useGetList = ({id}: {
     })
 }
 
+export const useDeleteList = (): UseMutationResult<void, Error, DeleteListParams, OptimisticContext<IToDoList[]>> => {
+    const queryClient = useQueryClient()
 
+    return useMutation({
+        mutationFn: deleteList,
+        onMutate: async ({id}) => {
+            const queryKey = ['toDoLists']
+            await queryClient.cancelQueries({queryKey})
+            const oldData = queryClient.getQueryData<IToDoList[]>(queryKey) ?? []
+            queryClient.setQueryData<IToDoList[]>(queryKey, old => old?.filter(l => l.id !== id))
+            return {oldData, queryKey}
+        },
+        onError: (_, __, context) => {
+            if (context) {
+                queryClient.setQueryData<IToDoList[]>(context.queryKey, context.oldData)
+            }
+        },
+    })
+}
+
+export const useDeleteTasks = (): UseMutationResult<void, Error, DeleteTaskParams, OptimisticContext<ITask[]>> => {
+    const queryClient = useQueryClient()
+
+    return useMutation({
+        mutationFn: deleteTask,
+        onMutate: ({id, toDoListId}) => {
+            const queryKey = ['tasks', toDoListId]
+            console.log(queryKey)
+            const oldData = queryClient.getQueryData<ITask[]>(queryKey) ?? []
+            queryClient.setQueryData<ITask[]>(queryKey, old => old?.filter(x => x.id !== id))
+            return {queryKey, oldData}
+        },
+        onError: (_, __, context) => {
+            if (context) {
+                queryClient.setQueryData(context.queryKey, context.oldData)
+            }
+        },
+    })
+}
+
+export const useGetTasksForList = (id: number): UseQueryResult<ITask[], Error> => {
+    return useQuery({
+        queryKey: ['tasks', id],
+        queryFn: () => getTasksForList({id}),
+    })
+}
+
+export const useUpdateTask = (): UseMutationResult<ITask, Error, UpdateTaskParams, OptimisticContext<ITask[]>> => {
+    const queryClient = useQueryClient()
+
+    return useMutation({
+        mutationFn: updateTask,
+        onMutate: async ({updatedTask}) => {
+            const queryKey = ['tasks', updatedTask.toDoListId]
+            const oldData = queryClient.getQueryData<ITask[]>(queryKey) ?? []
+            const newData = oldData.map(x => {
+                if (x.id === updatedTask.id) {
+                    return {...updatedTask}
+                }
+                return {...x}
+            })
+            queryClient.setQueryData<ITask[]>(queryKey, [...newData])
+            return {queryKey, oldData}
+        },
+        onError: (_, __, context) => {
+            if (context) {
+                queryClient.setQueryData<ITask[]>(context.queryKey, context.oldData)
+            }
+        },
+    })
+}
+
+export const useCreateTask = (): UseMutationResult<ITask, Error, CreateTaskParams, void> => {
+    const queryClient = useQueryClient()
+
+    return useMutation({
+        mutationFn: createTask,
+        onSettled: async (newTask) => {
+            if (newTask) {
+                queryClient.setQueryData<ITask[]>(
+                    ['tasks', newTask.toDoListId],
+                    old => old ? [...old, newTask] : [newTask],
+                )
+            }
+        },
+    })
+}
 
 
 //endregion
